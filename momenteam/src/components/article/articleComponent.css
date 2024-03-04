@@ -1,0 +1,28 @@
+/* articleComponent.css */
+.mainArticleComponent img {
+    width: 100%; /* Make the image take the full width of its container */
+    height: 37vh; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    object-position: center; /* Centers the image within its container */
+}
+
+.mainArticleComponent{
+    width: 28vw;
+    height: 55vh;
+}
+
+/* Optional: Additional CSS for custom alignment */
+.custom-article-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.custom-edit-button {
+    align-self: flex-end; /* Aligns the button to the right */
+    width: 5vw;
+    height: 4vh;
+    background-color: #DEF3FF; /* Set the background color of the submit button */
+    border-color: #093045;
+    color: #093045; /* Change the border color to match the background */
+}

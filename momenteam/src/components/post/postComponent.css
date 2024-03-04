@@ -1,0 +1,30 @@
+/* PostComponent.css */
+.mainPostCard{
+    margin-bottom: 4vh;
+}
+.post-card {
+    width: 100%;
+    max-width: 400px; /* Adjust the max-width as needed */
+    margin: 20px auto; /* Center the card and add some margin */
+   }
+   
+   .post-card .card-image {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+   }
+   
+   .post-card .card-body {
+    padding: 20px;
+   }
+   
+   .post-card .card-footer {
+    background-color: #f8f9fa; /* Light grey background for the footer */
+    padding: 10px;
+    text-align: right; /* Align the status text to the right */
+   }
+   
+   .post-card .btn-primary {
+    margin-left: 10px; /* Add some space between the status text and the button */
+   }
+   

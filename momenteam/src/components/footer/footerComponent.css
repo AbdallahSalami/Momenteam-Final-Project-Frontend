@@ -1,0 +1,127 @@
+/* General styles for the footer */
+.mainFooter {
+
+  
+  width:  90vw;
+  height:  24vh;
+  display: grid;
+  color: #fff;
+  box-shadow:  2px  2px  10px rgba(0,  0,  0,  1);
+  transition: box-shadow  0.3s ease, transform  0.3s ease;
+}
+
+.mainFooter:hover {
+  box-shadow:  5px  5px  10px rgba(0,  0,  0,  1);
+}
+
+/* Styles for the main footer links section */
+.mainFooterLinks {
+  height:  20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: #285C78;
+}
+
+.pageLinksFooter {
+  display: grid;
+}
+
+.pageLinksFooter a {
+  color: white;
+}
+
+.pageLinksFooter a:hover {
+  color: #007bff;
+}
+
+/* Styles for the contact us section */
+.contactUsAndSocialLinks {
+  display: grid;
+  justify-content: center;
+  align-items: start;
+  height:  100%;
+}
+
+.contactUsFooter {
+  background: #DEF3FF;
+  width:  30vw;
+  height:  18vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  margin-top: -8vh;
+  border-radius:  20px;
+  box-shadow:  1px  1px  10px rgba(0,  0,  0,  0.5);
+}
+
+.contactUsButtons {
+  display: flex;
+}
+
+.contactEmailInput {
+  border-radius:  25px;
+  height:  6vh;
+  width:  15vw;
+  text-align: center;
+  border: none;
+}
+
+.buttonContactUs {
+  border-radius:  25px;
+  height:  6vh;
+  width:  10vw;
+  background-color: #093045;
+  color: white;
+  z-index:  2px;
+  margin-left: -20px;
+}
+
+
+
+/* Styles for the social media links section */
+.socialMediaLinksFooter {
+  display: flex;
+  justify-content: center;
+  gap:  10px;
+}
+
+/* Styles for the footer line */
+.mainFooterLine {
+  height:  4vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #DEF3FF;
+}
+.righSideFooterLine{
+  width: 33%;
+
+}
+.copyRight {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+
+.thePrivacyLinks {
+  width: 34%;
+  display: flex;
+  gap:  10px;
+  padding-right: 2vw;
+  justify-content: flex-end;
+}
+
+.mainFooterLine a {
+  
+  color: #093045;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: color  0.3s ease;
+}
+
+.mainFooterLine a:hover {
+  color: #007bff;
+}

@@ -1,0 +1,24 @@
+.mainArtilcesPageComponent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.createMainArticleButton{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+}
+
+.createMainArticleButton button{
+    color: #093045; 
+    background-color: #DEF3FF;   
+}
+
+.createModalComponent{
+    color: #093045; 
+    background-color: #DEF3FF; }

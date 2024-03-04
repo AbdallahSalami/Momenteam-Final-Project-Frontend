@@ -1,0 +1,64 @@
+/* SinglePostModal.css */
+
+.single-post-modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f8f9fa; /* Light background color */
+    padding: 2vw; /* Adjust padding using viewport width */
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80vw; /* Adjust the width using viewport width */
+    max-width: 600px; /* Ensure the modal doesn't get too wide */
+    height: auto; /* Adjust the height to fit content */
+    max-height: 80vh; /* Ensure the modal doesn't get too tall */
+    overflow-y: auto; /* Add scroll if content exceeds the modal height */
+}
+
+.single-post-modal-header {
+    padding: 1vw; /* Adjust padding using viewport width */
+    background: #e9ecef; /* Slightly darker header background */
+    border-bottom: 1px solid #ced4da; /* Lighter border color */
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #343a40; /* Darker text color for better contrast */
+}
+
+.single-post-modal-body {
+    padding: 2vw; /* Adjust padding using viewport width */
+    font-size: 1rem;
+    color: #495057; /* Slightly darker text color for readability */
+}
+
+.single-post-modal-footer {
+    padding: 1vw; /* Adjust padding using viewport width */
+    background: #e9ecef; /* Matches header background for consistency */
+    border-top: 1px solid #ced4da; /* Lighter border color */
+    text-align: right;
+}
+
+.single-post-modal-close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0;
+    color: #6c757d; /* Darker color for the close button */
+}
+
+/* Optional: Add a backdrop for the modal */
+.single-post-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Behind the modal but above other content */
+}
+.cardSingleImage{
+    width: 100%;
+    height: 35vh;
+}

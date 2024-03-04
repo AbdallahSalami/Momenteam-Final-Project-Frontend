@@ -1,0 +1,125 @@
+.mainHomePage {
+    width: 90vw;
+    color: white;
+    border-radius: 10px;
+}
+.mainHomePage button{
+    background-color: #DEF3FF;
+    color: #093045;
+}
+.mainHomePagePart1 {
+    width: 90vw;
+    height: 85vh;
+    background: linear-gradient(to right, #093045 , rgb(36, 114, 159));
+}
+.mainHomePagePart1Text {
+    justify-content: center;
+    
+    width: 60vw;
+}
+.mainHomePagePart2 {
+    width: 90vw;
+    height: 100vh;
+    background-color: #A2C9DE   ;
+    text-align: center;
+    color: #093045;
+}
+
+.mainHomePagePart2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; Adjust the height as needed */
+    /* background-color: #f8f9fa; Example background color */
+   }
+   
+   .mainVideo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .mainVideo iframe {
+    width: 50vw; /* Make the video responsive */
+    height: 70vh; /* Maintain aspect ratio */
+   }
+   
+   .mainVideo .text-div {
+    text-align: center;
+    font-size: 24px; /* Adjust font size as needed */
+    color: #333; /* Adjust text color as needed */
+    margin-top: 20px; /* Add some space above the text */
+   }
+   
+
+
+
+
+
+.mainHomePagePart3 {
+    width: 90vw;
+    height: 100vh;
+    background-color: #DEF3FF;
+}
+.createPostButtonHomePage{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    padding-top: 2vh;
+    color: #093045;
+
+}
+
+.createPostButtonHomePage button{
+    border: 1px solid  #093045;
+    
+}
+
+
+
+.mainHomePagePart3Posts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: space-around;
+
+}
+
+
+
+.mainHomePagePart4 {
+    width: 90vw;
+    height: 75vh;
+    display: flex;
+
+    background-color: #093045;
+    color: white;
+    padding: 1vw;
+
+}
+.mainHomePagePart4TextAndButtonSide{
+    width: 55vw;
+    height: 79vh;
+
+}
+.mainHomePagePart4TextSide{
+
+}
+
+.mainHomePagePart4ButtonSide{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: end;
+}
+.mainHomePagePart4Button {
+    font-size: 2rem;
+    width: 20vw ;
+    height: 10vh;
+    border-radius: 10px;
+}
+.mainHomePagePart4ImageSide{
+    width: 35vw;
+    height: 79vh;
+}

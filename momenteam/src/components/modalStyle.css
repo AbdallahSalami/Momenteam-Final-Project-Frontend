@@ -1,0 +1,59 @@
+/* globalStyles.css */
+
+/* Modal styles */
+.modal-90w {
+    max-width: 30%; /* Adjust the modal width */
+}
+
+.modal-content {
+    color: #093045; /* Set the text color */
+}
+
+/* Style the submit button */
+.submit-button {
+    background-color: #DEF3FF; /* Set the background color of the submit button */
+    border-color: #093045;
+    color: #093045; /* Change the border color to match the background */
+}
+
+/* Ensure the "Submit" button is at the end of the form */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure the modal body takes up the full height */
+}
+
+/* Make the form a flex container and allow the button to be pushed to the end */
+.modal-body form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 1vh; /* Ensure the form takes up the full height of the modal body */
+}
+.error-message {
+    color: red;
+    margin-top: 10px;
+   }
+   
+/* Post card styles */
+.mainPostCard {
+    /* Add your styles for the main post card here */
+}
+
+.post-card {
+    /* Add your styles for the post card here */
+}
+
+.card-image {
+    /* Add your styles for the card image here */
+}
+
+.card-body {
+    /* Add your styles for the card body here */
+}
+
+.card-footer {
+    /* Add your styles for the card footer here */
+}

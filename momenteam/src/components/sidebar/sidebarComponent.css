@@ -1,0 +1,10 @@
+.mainSidabar{
+    width: 30vw;
+    background-color: #285C78 ;
+    justify-content: space-between;
+    padding:  10px  20px;
+    gap:  20px; /* Space between links */
+    color: #fff; /* White text for better contrast */
+    transition: box-shadow  0.3s ease, transform  0.3s ease; /* Add transition for box-shadow and transform */
+
+}

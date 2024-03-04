@@ -1,0 +1,26 @@
+/* createModalComponent.css */
+
+/* Set the modal background color */
+.create-article-modal .modal-content {
+    background-color: #A2C9DE;
+    color: #093045; /* Set the text color for the modal content */
+}
+
+/* Style the submit button */
+.create-article-submit-button {
+    background-color: #DEF3FF !important; /* Use !important to ensure this style takes precedence */
+    border-color: #DEF3FF !important; /* Change the border color to match the background */
+}
+
+/* Ensure the "Create" button is at the end of the form */
+.create-article-modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure the modal body takes up the full height */
+}
+
+/* Style the form elements */
+.create-article-modal-body .form-group {
+    margin-bottom: 1rem; /* Add some space between form elements */
+}

@@ -1,0 +1,67 @@
+.textMainEvent{
+    color: white;
+   }
+   .imageMainForBackground{
+    width: 90vw;
+    height: 90vh;
+   }
+   .mainTitleAndDetailsWithButtom{
+    justify-content: start;
+    display:grid;
+    text-align: start;
+    align-content: start;
+    gap: 8vh;
+    width: 45vw;
+    height: 90vh;
+   }
+   .titleEvent{
+    display: grid;
+    justify-content: start;
+   }
+
+   .titleEventtext{
+    font-size: 3rem;
+
+   }
+
+   .event-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+   
+
+
+.detailsEventtext{
+    font-size: 1.5rem;
+
+}
+
+   
+   .event-component-wrapper .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    justify-self: end;
+    transition: background-color 0.3s ease;
+
+
+   }
+   .event-details .btn-primary {
+    display: grid;
+    justify-content: center;
+   }
+
+
+
+   .event-component-wrapper .btn-primary:hover {
+    background-color: #0056b3;
+   }
+   
+
+
+

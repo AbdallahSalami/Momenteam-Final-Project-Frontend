@@ -1,0 +1,133 @@
+.mainLoginPage {
+    width:  90vw;
+    height:  90vh;
+    border-radius: 10px;
+    background-color:white;
+    box-shadow:  1px  1px  10px rgba(0,  0,  0,  0.5);
+}
+
+
+.mainLoginLayout1{
+    position: absolute;
+}
+.mainLoginLayout2{
+    position: absolute;
+
+    background: linear-gradient(to bottom, #093045, #285C78,#093045);
+    /* background: linear-gradient(to right, #093045, #285C78,#093045); */
+    color: white;
+    display: grid;
+    align-content: start;
+    padding: 5vw;
+    z-index: 2;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 10px;
+
+}
+.mainLoginLayout3 {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    padding-right:10vw ;
+    z-index: 3;
+    width: 90vw;
+    height: 90vh;
+}
+.loginImage{
+    width: 60vw;
+    height: 90vh;
+}
+
+
+.mainLoginText{
+    display: grid;
+    justify-content: center;
+    align-content:center;
+    text-align: center;
+    gap: 20px;
+    color: white;
+    background-color: rgba(0,  0,  0,  0.2);
+}
+
+.mainXclick {
+    
+    display: flex;
+    justify-self: center;    
+    z-index: 2;
+    position:absolute;
+    align-self: flex-start;
+    gap: 17vw;
+    margin-top: 1vw;
+    
+}
+
+.mainXclick button{
+    background-color: #DEF3FF;
+    color: #093045;
+    border-radius: 23px;
+}
+
+.loginMain {
+    background: transparent;
+    /* backdrop-filter: blur(9px); */
+    position: relative;
+    
+    display: flex;
+    width:  100%;   
+    height: 100%;
+    z-index: 10;
+}
+.mainloginDetails{
+    width: 60vw;
+    height: 90vh;
+    background-color: transparent;
+    color: white;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    align-content: center;
+    gap: 1vh;
+    padding-left: 3vw;
+
+}
+
+.loginMainForm {
+    display: grid;
+    width: 30vw;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 15px;
+    backdrop-filter: blur(5px);
+
+    ; /* Add some space between form elements */
+}
+.emptySpace{
+    width: 5vw;
+    height: 90vh;
+}
+.loginMainForm label {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginMainForm input {
+    padding:  10px;
+    border-radius:  5px;
+    border:  1px solid #ccc;
+}
+
+.loginMainForm button {
+    padding:  10px;
+    border-radius:  5px;
+    border: none;
+    background-color: #093045;
+    color: white;
+    cursor: pointer;
+}
+
+.loginMainForm button:hover {
+    background-color: #001b29;
+}

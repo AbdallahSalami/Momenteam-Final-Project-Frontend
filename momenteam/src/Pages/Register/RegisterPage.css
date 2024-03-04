@@ -1,0 +1,10 @@
+.register-form .input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+   }
+   
+   .register-form .input-row .mb-3 {
+    flex: 1;
+   }
+   

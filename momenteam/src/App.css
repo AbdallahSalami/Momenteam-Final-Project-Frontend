@@ -1,0 +1,10 @@
+body {
+  width: 90vw;
+  display: grid;
+  margin: auto;
+  margin-top: 5vh;
+  box-shadow:  1px  1px  10px rgba(0,  0,  0,  1);
+  background-color: transparent;
+  border-radius: 10px;
+  color: white;
+}

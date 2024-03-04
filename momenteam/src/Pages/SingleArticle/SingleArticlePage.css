@@ -1,0 +1,21 @@
+/* Adjust the size of the image */
+.articleSingle-page .custom-image {
+    min-height: 80vh;
+    max-height: 200vh; /* Adjust the height as needed */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+/* Ensure the title is centered */
+.articleSingle-page .custom-title {
+    font-size: 4vw;
+    margin-bottom: 2vh;
+    text-align: center; /* Ensure the title is centered */
+}
+
+/* Adjust the text size for better readability */
+.articleSingle-page .custom-text {
+    font-size: 2.5vw;
+    margin-bottom: 3vh;
+    text-align: center; /* Ensure the text is centered */
+}
+    
