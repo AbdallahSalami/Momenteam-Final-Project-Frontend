@@ -11,7 +11,6 @@ import {
 } from 'mdb-react-ui-kit';
 import './eventComponent.css';
 import ImageEvent from '../../assets/imageJustEvnt.png';
-import ImageEventWith from '../../assets/imageWith.png';
 
 interface DecodedToken {
  sub: string;
@@ -28,6 +27,8 @@ interface Event {
  date: string;
  location: string;
  status: string;
+ image: string; // Add this line to include the 'image' property
+
 }
 
 interface EventComponentProps {
@@ -55,8 +56,8 @@ interface User {
      user_id: number;
   };
  }
-const EventComponent: React.FC<EventComponentProps> = ({ event, userEvents }) => {
- const navigate = useNavigate();
+ const EventComponent: React.FC<EventComponentProps> = ({ event, userEvents }) => {
+    const navigate = useNavigate();
  const [isRegistered, setIsRegistered] = useState(false);
  const [message, setMessage] = useState('');
  const [decodedToken, setDecodedToken] = useState<DecodedToken | null>(null);
@@ -67,7 +68,15 @@ const EventComponent: React.FC<EventComponentProps> = ({ event, userEvents }) =>
 
  const token: string | null = sessionStorage.getItem('token');
 
+
  useEffect(() => {
+  const isUserRegistered = userEvents.some(userEvent => userEvent.id === event.id);
+  setIsRegistered(isUserRegistered);
+}, [event, userEvents]);
+
+
+
+ useEffect(() => {  
     if (token !== null) {
       const decoded: DecodedToken = jwtDecode(token);
       setDecodedToken(decoded);
@@ -132,8 +141,14 @@ const EventComponent: React.FC<EventComponentProps> = ({ event, userEvents }) =>
  return (
     <div className="event-component-wrapper">
     <MDBCard background='dark' className='textMainEvent'>
-      <MDBCardImage className='imageMainForBackground' overlay src={ImageEvent} />
-      <MDBCardOverlay className='mainTitleAndDetailsWithButtom'>
+      <MDBCardImage className='imageMainForBackground' overlay 
+    src={`http://localhost:8000/storage/images/${event.image}`}
+    alt={event.title}
+    onError={(e) => {
+      e.currentTarget.onerror = null; // Prevent infinite loop if ImageUnivers also fails to load
+      e.currentTarget.src = ImageEvent;
+    }}
+  />      <MDBCardOverlay className='mainTitleAndDetailsWithButtom'>
         <MDBCardTitle className='titleEvent'>
           <MDBCardTitle className='titleEventtext'>{event.title}</MDBCardTitle>
         </MDBCardTitle>

@@ -46,21 +46,20 @@ const LoginPage = () => {
 
  return (
     <>
-      <div className='mainLoginPage'>
-        <div className='mainLoginLayout1'></div>
-        <div className='mainLoginLayout2'>
-          <h1>Login</h1>
-        </div>
-        <div className='mainLoginLayout3'>
-          <img className='loginImage' src={momnteamLogoLogin} alt="Login" />
-        </div>
-        <div className='loginMain'>
-          <div className='mainloginDetails'>
-            <h3>To be part of Momenteam community</h3>
-            <h4>Having a chance</h4>
-            <h5>To be good</h5>
-            <h2>Scientist in the World!!</h2>
-          </div>
+   <div className='mainLoginPage'>
+ <div className='mainLoginLayout1'></div>
+ <div className='mainLoginLayout2'>
+    <h1>Welcome to Momenteam</h1>
+ </div>
+ <div className='mainLoginLayout3'>
+    <img className='loginImage' src={momnteamLogoLogin} alt="Login" />
+ </div>
+ <div className='loginMain'>
+    <div className='mainloginDetails'>
+      <h2>Join the Community</h2>
+      <h3>Discover, Connect, and Grow with Momenteam</h3>
+      <h4>Your Gateway to a World of Opportunities</h4>
+    </div>
           <div className='mainLoginText'>
             <form className='loginMainForm' onSubmit={handleSubmit}>
               <label>

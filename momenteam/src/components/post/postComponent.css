@@ -1,30 +1,40 @@
 /* PostComponent.css */
-.mainPostCard{
-    margin-bottom: 4vh;
+.mainPostCard {
+    height: 43vh; /* Set the maximum height of the card */
+    margin-bottom: 1vh;
 }
+
 .post-card {
+    width: 90vw; /* Adjust the width to be 90% of the viewport width */
+    max-width: 400px; /* Keep the max-width as a fallback for very large screens */
+    margin: 2vh auto; /* Use vh for margin to make it responsive */
+    height: 100%; /* Ensure the card takes up the full height of its parent */
+    display: flex; /* Use flexbox to control the layout of the card */
+    flex-direction: column; /* Stack the card content vertically */
+}
+
+.post-card .card-image {
     width: 100%;
-    max-width: 400px; /* Adjust the max-width as needed */
-    margin: 20px auto; /* Center the card and add some margin */
-   }
-   
-   .post-card .card-image {
-    width: 100%;
-    height: 200px; /* Adjust the height as needed */
+    height: 25vh; /* Adjust the height to be 25% of the viewport height to fit within the card */
     object-fit: cover; /* Ensures the image covers the area without stretching */
-   }
-   
-   .post-card .card-body {
-    padding: 20px;
-   }
-   
-   .post-card .card-footer {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.post-card .card-body {
+    padding: 2vh; /* Use vh for padding to make it responsive */
+    flex-grow: 1; /* Allow the body to take up any remaining space */
+    overflow: auto; /* Add scrolling if the content overflows */
+}
+
+.post-card .card-footer {
     background-color: #f8f9fa; /* Light grey background for the footer */
-    padding: 10px;
+    padding: 1vh; /* Use vh for padding to make it responsive */
     text-align: right; /* Align the status text to the right */
-   }
-   
-   .post-card .btn-primary {
-    margin-left: 10px; /* Add some space between the status text and the button */
-   }
-   
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+
+.post-card .btn-primary {
+    margin-left: 1vw; /* Use vw for margin to make it responsive */
+    padding: 0.5vh 1vw; /* Adjust the padding to make the button size more appropriate */
+    font-size: 1rem; /* Adjust the font size to make the button text more readable */
+}

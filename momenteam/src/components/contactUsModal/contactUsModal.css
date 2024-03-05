@@ -1,4 +1,4 @@
-/* src/components/Modal.css */
+/* src/components/contactUsModal.css */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -9,13 +9,74 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   }
-   
-   .modal-content {
+    z-index: 1000; /* Ensure the modal is above other content */
+}
+
+.modal-content {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     width: 80%;
     max-width: 500px;
-   }
-   
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.modal-content h2 {
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add some space between form elements */
+}
+
+.modal-content input,
+.modal-content textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.modal-content textarea {
+    resize: none; /* Prevent manual resizing */
+    height: 100px; /* Set a fixed height for the textarea */
+}
+
+/* src/components/contactUsModal.css */
+.modal-content button[type="submit"],
+.modal-content button[type="button"] {
+    background-color: #DEF3FF; /* Matches the color used in the home page buttons */
+    color: #093045; /* Matches the color used in the home page buttons */
+    /* Removed border to match the request */
+    border-radius: 25px;
+    padding: 15px 30px; /* Increased padding for a larger button */
+    font-size: 1.2rem; /* Increased font size for a larger button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-content button[type="submit"]:hover,
+.modal-content button[type="button"]:hover {
+    background-color: #001b29; /* Darker shade for hover effect */
+    color: #DEF3FF; /* Ensures text remains visible on hover */
+}
+/* src/components/contactUsModal.css */
+.modal-content button[type="button"] {
+    background-color: #DEF3FF; /* Matches the color used in the home page buttons */
+    color: #093045; /* Matches the color used in the home page buttons */
+    /* Removed border to match the request */
+    border-radius: 25px;
+    padding: 15px 30px; /* Increased padding for a larger button */
+    font-size: 1.2rem; /* Increased font size for a larger button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px; /* Add some space above the close button */
+}
+
+.modal-content button[type="button"]:hover {
+    background-color: #001b29; /* Darker shade for hover effect */
+    color: #DEF3FF; /* Ensures text remains visible on hover */
+}

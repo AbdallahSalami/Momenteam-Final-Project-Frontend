@@ -4,6 +4,9 @@ import PostComponent from '../../components/post/postComponent.tsx'; // Adjust t
 import CreatePostModal from '../../components/post/createModal/createModalComponent.tsx'; // Adjust the import path as necessary
 import { jwtDecode } from 'jwt-decode';
 import './HomePage.css';
+import MainImage from '../../assets/mainPage.png'
+import TeamImage from '../../assets/tak1.png'
+import ContactUsModal from '../../components/contactUsModal/contactUsModal.tsx'; // Adjust the import path as necessary
 
 interface Post {
  id: number;
@@ -24,14 +27,21 @@ interface DecodedToken {
 
 const HomePage: React.FC = () => {
  const navigate = useNavigate();
- const goContactUs = () => navigate('/contact-us');
  const [posts, setPosts] = useState<Post[]>([]);
  const [showCreatePostModal, setShowCreatePostModal] = useState(false);
  const [decodedToken, setDecodedToken] = useState<DecodedToken | null>(null);
  const [currentPage, setCurrentPage] = useState(1);
  const itemsPerPage = 8; // Number of posts per page
  const [totalPages, setTotalPages] = useState(1); // Total number of pages
+ const [showContactUsModal, setShowContactUsModal] = useState(false);
 
+ // Function to handle the "Join Us" button click
+ const goToRegisterPage = () => {
+  navigate('/register');
+ };
+ const openContactUsModal = () => {
+  setShowContactUsModal(true);
+};
 
  const handlePostCreated = (newPost: Post) => {
   console.log('New post created:', newPost);
@@ -83,12 +93,14 @@ const HomePage: React.FC = () => {
         <div className='mainHomePagePart1Text'>
           <h1>Welcome To Momenteam !!</h1>
           <h3> A physics family led by ambition, emerged from the embrace of the Lebanese University and set out towards the world. Here you will find an opportunity to learn new things and dive with us in the world of physics, in a different scientific mold...</h3>
+          <button className='mainButtonAtHome' onClick={goToRegisterPage}>Join Us</button>
         </div>
         <div className='mainHomePagePart1Image'>
+          <img  className="mainImageHomePage" src={MainImage}></img>
         </div>
       </div>
       <div className='mainHomePagePart2'>
-      <h1 className="text-div">Watch  to Know More Who We Are !!</h1>
+      <h1 className="text-div">Watch to know more about who we are!</h1>
 
         <div className='mainVideo'>
         <iframe src="https://drive.google.com/file/d/16uY5OJsHiNDnDcJdLnHC0EoBZe8LKGit/preview"></iframe>
@@ -132,16 +144,37 @@ const HomePage: React.FC = () => {
       <div className='mainHomePagePart4'>
         <div className='mainHomePagePart4TextAndButtonSide'>
           <div className='mainHomePagePart4TextSide'>
-            <h1>aaaaa</h1>
+            <h1>If you have a scientific idea and are prepared to present it to an audience of science students
+
+
+
+
+</h1>
           </div>
           <div className='mainHomePagePart4ButtonSide'>
-            <button className='mainHomePagePart4Button' onClick={goContactUs}>Click Here</button>
+          <button
+            className='mainHomePagePart4Button clickHereButton'
+            onClick={openContactUsModal}
+            >            
+            Click Here
+          </button>
           </div>
         </div>
         <div className='mainHomePagePart4ImageSide'>
-          {/* Content for mainHomePagePart4ImageSide */}
+          <img  className='teamImageHomePage'src={TeamImage}></img>
         </div>
       </div>
+      {showContactUsModal && (
+ <ContactUsModal
+    isOpen={showContactUsModal}
+    onClose={() => setShowContactUsModal(false)}
+    onSubmit={(data) => {
+      console.log("Form submitted with data:", data);
+      setShowContactUsModal(false); // Close the modal after submission
+      // Handle the submitted data as needed
+    }}
+ />
+)}
     </div>
  );
 }

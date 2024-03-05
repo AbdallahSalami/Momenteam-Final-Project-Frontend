@@ -56,6 +56,8 @@ const ArticleComponent: React.FC<ArticleComponentProps> = ({ article, memberId }
     navigate(`/article/${article.id}`);
  };
 
+ console.log(article.id)
+
  const isAuthor = decodedToken?.memberId ? parseInt(decodedToken.memberId) === memberId : false;
 
  const isDescriptionLong = (description: string) => {

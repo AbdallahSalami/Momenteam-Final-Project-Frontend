@@ -9,7 +9,9 @@ interface Event {
   description: string;
   date: string;
   location:string;
-  status: string; 
+  status: string;
+  image: string; // Add the 'image' property
+ 
 }
 
 const EventPage: React.FC = () => {
@@ -49,9 +51,12 @@ const EventPage: React.FC = () => {
     if (token) fetchUserEvents(Number(jwtDecode(token).sub)) 
   }, [token]);
  
-  const today = new Date();
   return (
-    <div>
+    <div className='mainEventPage'>
+
+      <div className='titleMainEventPage'>
+        <h1>Events</h1>
+      </div>
       <div className='mainEventComponent'>
       {/* {events.map((event) =>
  new Date(event.date) < today ? (

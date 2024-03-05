@@ -1,10 +1,88 @@
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    width: 100% ;
+    
+}
+.mainImageRegisterPage{
+    width: 40vw;
+    height: 90vh;
+    display: grid;
+    justify-content: center;
+    
+}
+.mainRegisterImage{
+    width: 35vw;
+    height: 84vh;
+  
+}
+.col-md-6{
+    width: 60vw;
+}
+
+.justify-content-center{
+    padding-top: 2vh;
+    width: 49vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+.buttons-container{
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+}
+.buttons-container button{
+    background-color: #DEF3FF;
+    color: #093045;
+    border-radius: 23px;
+    font-family: inherit;
+    border: 2px solid #093045;
+
+}
+
+.buttons-container button:hover {
+    background-color: #DEF3FF;
+    color: #093045;
+
+    border-color: #646cff;
+}
+
+.register-form{ 
+    width: 48vw;
+}
+
 .register-form .input-row {
     display: flex;
     justify-content: space-between;
     gap: 10px;
    }
-   
+   .register-form .input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+   }
    .register-form .input-row .mb-3 {
     flex: 1;
+
+
+
    }
-   
+.register-form button {
+
+    padding:  10px;
+    background-color: #093045;
+    border: 1px solid #DEF3FF;
+
+    color: white;
+    cursor: pointer;
+    width: 48vw;
+
+}
+.register-form button:hover{
+    background-color: #001b29;
+    border-color: #646cff;
+
+}

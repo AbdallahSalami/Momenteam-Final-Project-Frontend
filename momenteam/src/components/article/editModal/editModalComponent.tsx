@@ -21,28 +21,34 @@ interface EditModalProps {
 const EditModal: React.FC<EditModalProps> = ({ article, closeModal, showEditModal }) => {
  const [title, setTitle] = useState(article.title);
  const [description, setDescription] = useState(article.description);
- const [image, setImage] = useState(article.image);
+ const [image, setImage] = useState<File | null>(null); // Change to File type
 
  const handleClose = () => {
-    closeModal(); // Close the modal by calling the closeModal function from the parent component
+    closeModal();
  };
 
  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Prepare the data to be sent in the PATCH request
-    const data: Partial<Article> = {
-      title,
-      description,
-      image,
-      status: 'submitted', // Assuming you want to update the status to 'submitted' upon editing
-    };
+    // Create a FormData instance
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('description', description);
+    // Append the image file if it exists
+    if (image) {
+        formData.append('image', image);
+    }
+    formData.append('status', 'submitted');
 
     try {
-      const response = await axios.patch(`http://localhost:8000/api/articles/${article.id}`, data);
+      const response = await axios.post(`http://localhost:8000/api/articles/${article.id}?_method=PATCH`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data', // Important for file uploads
+        },
+      });
 
       if (response.status === 200) {
-        handleClose(); // Close the modal after successful submission
+        handleClose();
       }
     } catch (error) {
       console.error('Error submitting the article:', error);
@@ -67,10 +73,15 @@ const EditModal: React.FC<EditModalProps> = ({ article, closeModal, showEditModa
           </Form.Group>
 
           <Form.Group controlId="formImage">
-            <Form.Label>Image URL</Form.Label>
-            <Form.Control type="text" placeholder="Enter image URL" value={image} onChange={(e) => setImage(e.target.value)} />
+            <Form.Label>Image</Form.Label>
+            <Form.Control type="file" onChange={(e) => {
+            // Assert the correct type for the event target
+           const target = e.target as HTMLInputElement;
+            if (target.files) {
+            setImage(target.files[0]);
+            }
+            }} />
           </Form.Group>
-
           <Button variant="primary" type="submit" className="submit-button">Submit</Button>
         </Form>
       </Modal.Body>

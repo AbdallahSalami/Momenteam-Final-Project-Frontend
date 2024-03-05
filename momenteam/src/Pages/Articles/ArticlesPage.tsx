@@ -47,7 +47,8 @@ const ArticlesPage: React.FC = () => {
  useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/articles');
+        const response = await fetch('http://localhost:8000/api/articles', {
+        });
         if (!response.ok) {
           throw new Error('Failed to fetch articles');
         }
@@ -63,13 +64,13 @@ const ArticlesPage: React.FC = () => {
     };
 
     fetchArticles();
- }, []);
+ }, []); // Depend on method in useEffect
 
  return (
     <div className='mainArtilcesPage'>
       <div className='createMainArticleButton'>
         <h1> Articles </h1>
-        <button  onClick={handleCreateModalOpen}>Create Article</button>
+        <button onClick={handleCreateModalOpen}>Create Article</button>
       </div>
       <div className='mainArtilcesPageComponent'>
           {articles.map(article => (
@@ -81,7 +82,6 @@ const ArticlesPage: React.FC = () => {
         <CreateModal closeModal={handleCreateModalClose} memberId={memberId} show={showCreateModal} />
       )}
       </div>
-     
     </div>
  );
 };

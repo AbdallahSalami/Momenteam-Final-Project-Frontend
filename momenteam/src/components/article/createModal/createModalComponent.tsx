@@ -1,33 +1,42 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Modal, Button, Form } from 'react-bootstrap';
-import '../../modalStyle.css'
+import '../../modalStyle.css';
 
 interface CreateModalProps {
  closeModal: () => void;
- memberId: number | null; // Allow memberId to be null
- show: boolean; // Add this line to include the 'show' property
+ memberId: number | null;
+ show: boolean;
 }
 
 const CreateModal: React.FC<CreateModalProps> = ({ closeModal, memberId, show }) => {
  const [title, setTitle] = useState('');
  const [description, setDescription] = useState('');
- const [image, setImage] = useState('');
+ const [image, setImage] = useState<File | null>(null);
 
  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // Create a FormData instance
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('description', description);
+    // Append the image file if it exists
+    if (image) {
+        formData.append('image', image);
+    }
+    formData.append('status', 'draft');
+    formData.append('memberId', memberId?.toString() || ''); // Convert memberId to string and append
+
     try {
-      const response = await axios.post('http://localhost:8000/api/articles', {
-        title,
-        description,
-        image,
-        status: 'draft', // Set the status to 'draft' upon creation
-        memberId, // Include memberId in the request payload
+      const response = await axios.post('http://localhost:8000/api/articles', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data', // Important for file uploads
+        },
       });
 
       if (response.status === 201) {
-        closeModal(); // Close the modal after successful creation
+        closeModal();
       }
     } catch (error) {
       console.error('Error creating the article:', error);
@@ -52,8 +61,13 @@ const CreateModal: React.FC<CreateModalProps> = ({ closeModal, memberId, show })
           </Form.Group>
 
           <Form.Group controlId="formImage">
-            <Form.Label>Image URL</Form.Label>
-            <Form.Control type="text" placeholder="Enter image URL" value={image} onChange={(e) => setImage(e.target.value)} />
+            <Form.Label>Image</Form.Label>
+            <Form.Control type="file" onChange={(e) => {
+              const target = e.target as HTMLInputElement;
+              if (target.files) {
+                setImage(target.files[0]);
+              }
+            }} />
           </Form.Group>
 
           <Button variant="primary" type="submit" className="submit-button">Create</Button>

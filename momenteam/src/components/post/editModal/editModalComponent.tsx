@@ -38,7 +38,7 @@ const EditPostModal: React.FC<EditPostModalProps> = ({ post, closeModal }) => {
   }
 
   try {
-    const response = await axios.patch(`http://localhost:8000/api/posts/${post.id}`, formData, {
+    const response = await axios.post(`http://localhost:8000/api/posts/${post.id}?_method=PATCH`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },

@@ -1,20 +1,20 @@
+/* General Container Styles */
 .mainLoginPage {
-    width:  90vw;
-    height:  90vh;
+    width: 90vw;
+    height: 90vh;
     border-radius: 10px;
-    background-color:white;
-    box-shadow:  1px  1px  10px rgba(0,  0,  0,  0.5);
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
-
-.mainLoginLayout1{
+/* Layout Styles */
+.mainLoginLayout1 {
     position: absolute;
 }
-.mainLoginLayout2{
-    position: absolute;
 
-    background: linear-gradient(to bottom, #093045, #285C78,#093045);
-    /* background: linear-gradient(to right, #093045, #285C78,#093045); */
+.mainLoginLayout2 {
+    position: absolute;
+    background: linear-gradient(to bottom, #093045, #285C78, #093045);
     color: white;
     display: grid;
     align-content: start;
@@ -23,62 +23,61 @@
     width: 90vw;
     height: 90vh;
     border-radius: 10px;
-
 }
+
 .mainLoginLayout3 {
     position: absolute;
     display: flex;
     justify-content: end;
-    padding-right:10vw ;
+    padding-right: 10vw;
     z-index: 3;
     width: 90vw;
     height: 90vh;
 }
-.loginImage{
+
+.loginImage {
     width: 60vw;
     height: 90vh;
 }
 
-
-.mainLoginText{
+/* Text and Form Styles */
+.mainLoginText {
     display: grid;
     justify-content: center;
-    align-content:center;
+    align-content: center;
     text-align: center;
     gap: 20px;
     color: white;
-    background-color: rgba(0,  0,  0,  0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .mainXclick {
-    
     display: flex;
-    justify-self: center;    
+    justify-self: center;
     z-index: 2;
-    position:absolute;
+    position: absolute;
     align-self: flex-start;
     gap: 17vw;
     margin-top: 1vw;
-    
 }
 
-.mainXclick button{
+.mainXclick button {
     background-color: #DEF3FF;
     color: #093045;
     border-radius: 23px;
+    border: 2px solid #093045;
 }
 
 .loginMain {
     background: transparent;
-    /* backdrop-filter: blur(9px); */
     position: relative;
-    
     display: flex;
-    width:  100%;   
+    width: 100%;
     height: 100%;
     z-index: 10;
 }
-.mainloginDetails{
+
+.mainloginDetails {
     width: 60vw;
     height: 90vh;
     background-color: transparent;
@@ -89,7 +88,6 @@
     align-content: center;
     gap: 1vh;
     padding-left: 3vw;
-
 }
 
 .loginMainForm {
@@ -101,28 +99,21 @@
     align-content: center;
     gap: 15px;
     backdrop-filter: blur(5px);
+}
 
-    ; /* Add some space between form elements */
-}
-.emptySpace{
-    width: 5vw;
-    height: 90vh;
-}
 .loginMainForm label {
     display: flex;
     flex-direction: column;
 }
 
 .loginMainForm input {
-    padding:  10px;
-    border-radius:  5px;
-    border:  1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .loginMainForm button {
-    padding:  10px;
-    border-radius:  5px;
-    border: none;
+    padding: 10px;
     background-color: #093045;
     color: white;
     cursor: pointer;

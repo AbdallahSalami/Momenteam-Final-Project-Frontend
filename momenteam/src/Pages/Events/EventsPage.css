@@ -1,0 +1,17 @@
+.mainEventPage {
+
+}
+
+
+
+
+
+.titleMainEventPage {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+   
+}
