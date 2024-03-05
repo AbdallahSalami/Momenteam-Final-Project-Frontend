@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "module": "ES6",
+
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
